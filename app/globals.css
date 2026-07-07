@@ -1,8 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Class-based dark mode so we can ship a theme toggle (not OS-locked). */
-@custom-variant dark (&:is(.dark *));
+/* Hatseas is light-only by design — no dark variant, no toggle. */
 
 /*
  * ────────────────────────────────────────────────────────────────────────────
@@ -15,7 +14,7 @@
 
 :root {
   /* brand:hue:start */
-  --brand-hue: 265; /* set by brand.config.ts */
+  --brand-hue: 206; /* set by brand.config.ts */
 /* brand:hue:end */
 
   /* radius — brand:corners controls this via `npm run brand` */
@@ -54,40 +53,11 @@
   --aurora-1: oklch(0.7 0.2 var(--brand-hue));
   --aurora-2: oklch(0.72 0.18 calc(var(--brand-hue) + 60));
   --aurora-3: oklch(0.75 0.16 calc(var(--brand-hue) - 50));
-}
 
-.dark {
-  /* Near-black mono base: surfaces stay neutral; violet is reserved as the accent. */
-  --background: oklch(0.15 0.004 var(--brand-hue));
-  --foreground: oklch(0.97 0.006 var(--brand-hue));
-
-  --card: oklch(0.185 0.005 var(--brand-hue));
-  --card-foreground: oklch(0.97 0.006 var(--brand-hue));
-  --popover: oklch(0.185 0.005 var(--brand-hue));
-  --popover-foreground: oklch(0.97 0.006 var(--brand-hue));
-
-  --primary: oklch(0.7 0.19 var(--brand-hue));
-  --primary-foreground: oklch(0.15 0.02 var(--brand-hue));
-
-  --secondary: oklch(0.24 0.006 var(--brand-hue));
-  --secondary-foreground: oklch(0.97 0.006 var(--brand-hue));
-
-  --muted: oklch(0.23 0.006 var(--brand-hue));
-  --muted-foreground: oklch(0.72 0.012 var(--brand-hue));
-
-  --accent: oklch(0.27 0.012 var(--brand-hue));
-  --accent-foreground: oklch(0.97 0.006 var(--brand-hue));
-
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.97 0.01 25);
-
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.7 0.19 var(--brand-hue));
-
-  --aurora-1: oklch(0.65 0.22 var(--brand-hue));
-  --aurora-2: oklch(0.68 0.2 calc(var(--brand-hue) + 60));
-  --aurora-3: oklch(0.7 0.18 calc(var(--brand-hue) - 50));
+  /* Secondary accent — the warm sand/gold from the HatSeas hat mark. Used sparingly
+     to punctuate CTAs and badges against the teal primary. */
+  --warm: oklch(0.77 0.135 63);
+  --warm-foreground: oklch(0.22 0.03 63);
 }
 
 /* Map tokens → Tailwind theme so you can use bg-primary, text-muted-foreground… */
@@ -114,6 +84,8 @@
   --color-aurora-1: var(--aurora-1);
   --color-aurora-2: var(--aurora-2);
   --color-aurora-3: var(--aurora-3);
+  --color-warm: var(--warm);
+  --color-warm-foreground: var(--warm-foreground);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

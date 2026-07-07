@@ -30,6 +30,36 @@ export function XIcon({ className }: { className?: string }) {
   );
 }
 
+export function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden
+      className={cn("size-4", className)}
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+      className={cn("size-4", className)}
+    >
+      <path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.3c-.28-.04-1.23-.12-2.34-.12-2.32 0-3.91 1.42-3.91 4.02V10.5H8v3h2.25V21h3.25Z" />
+    </svg>
+  );
+}
+
 export function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg

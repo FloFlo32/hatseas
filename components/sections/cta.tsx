@@ -1,33 +1,48 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { brand } from "@/brand.config";
 import { Button } from "@/components/ui/button";
-import { GitHubIcon } from "@/components/icons";
 import { GridPattern } from "@/components/magic/grid-pattern";
 import { Reveal } from "@/components/magic/reveal";
 
-export function CTA() {
+/** Reusable closing CTA banner used across every page. */
+export function CTA({
+  title,
+  body,
+  primaryLabel = "Explore Tours",
+  primaryHref = "/tours",
+}: {
+  title: string;
+  body: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+}) {
   return (
-    <section id="cta" className="container-px mx-auto max-w-6xl py-24">
+    <section className="container-px mx-auto max-w-6xl py-20 sm:py-24">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-20 text-center sm:px-12">
-          <GridPattern />
-          <h2 className="mx-auto max-w-2xl text-balance text-4xl font-bold sm:text-5xl">
-            Start your next site on <span className="text-primary">{brand.name}</span>
+        <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center text-primary-foreground sm:px-12 sm:py-20">
+          <GridPattern className="opacity-10" />
+          <h2 className="relative mx-auto max-w-2xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
+            {title}
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Clone it, name it, ship it. The last starter you&apos;ll set up by hand.
+          <p className="relative mx-auto mt-4 max-w-lg text-primary-foreground/85">
+            {body}
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <Link href={`https://github.com/${brand.social.github}`}>
-                Get the starter <ArrowRight className="size-4" />
+          <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="secondary" className="bg-warm text-warm-foreground hover:bg-warm/90">
+              <Link href={primaryHref}>
+                {primaryLabel} <ArrowRight className="size-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href={`https://github.com/${brand.social.github}`}>
-                <GitHubIcon className="size-4" /> Star on GitHub
-              </Link>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+            >
+              <a href="tel:5642242627">
+                <Phone className="size-4" /> {brand.contact.phone}
+              </a>
             </Button>
           </div>
         </div>

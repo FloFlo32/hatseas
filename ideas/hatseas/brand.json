@@ -1,0 +1,136 @@
+{
+  "source": "https://hatseas.com",
+  "ingestedFromHost": "hatseas.com",
+  "pagesCrawled": 8,
+  "name": "Hatseas",
+  "tagline": "Hatseas",
+  "description": "Discover unforgettable island excursions and adventures in the Bahamas with HatSeas. Book your dream tours and rentals today!",
+  "domain": "hatseas.com",
+  "brandColor": {
+    "hex": "#67a2b8",
+    "src": "theme-color",
+    "oklchHue": 224
+  },
+  "theme": {
+    "hue": 224
+  },
+  "fonts": [],
+  "logo": null,
+  "logoNote": "Logo not auto-found — grab the navbar logo manually",
+  "favicon": "https://img1.wsimg.com/isteam/ip/9506775e-d1b1-4f1f-b926-80c4b69fae4c/HATSEAS%20LOGO.png/:/rs=w:57,h:57,m",
+  "images": [
+    "/ingested/hatseas/img-002.webp",
+    "/ingested/hatseas/img-009.webp",
+    "/ingested/hatseas/img-010.webp",
+    "/ingested/hatseas/img-011.webp",
+    "/ingested/hatseas/img-012.webp",
+    "/ingested/hatseas/img-013.webp",
+    "/ingested/hatseas/img-014.webp",
+    "/ingested/hatseas/img-015.webp",
+    "/ingested/hatseas/img-018.webp",
+    "/ingested/hatseas/img-020.webp"
+  ],
+  "imageCount": 10,
+  "social": {
+    "instagram": "https://www.instagram.com/hatseas_bahamas"
+  },
+  "whatsapp": null,
+  "phone": null,
+  "location": {
+    "address": "Bahamas",
+    "lat": "25.0443256",
+    "lng": "-77.3503559",
+    "mapQuery": "Bahamas"
+  },
+  "sectionOrder": [
+    "Welcome",
+    "Island Excursions in the Bahamas",
+    "Why Choose Bahamas",
+    "Subscribe",
+    "Discover Your Dream Island Adventures with Us"
+  ],
+  "navItems": [
+    {
+      "text": "About",
+      "url": "https://hatseas.com/about",
+      "path": "/about"
+    },
+    {
+      "text": "Tours",
+      "url": "https://hatseas.com/tours",
+      "path": "/tours"
+    },
+    {
+      "text": "Rentals",
+      "url": "https://hatseas.com/rentals",
+      "path": "/rentals"
+    },
+    {
+      "text": "VIP Package",
+      "url": "https://hatseas.com/vip-package",
+      "path": "/vip-package"
+    },
+    {
+      "text": "Contact",
+      "url": "https://hatseas.com/contact",
+      "path": "/contact"
+    },
+    {
+      "text": "FAQ's",
+      "url": "https://hatseas.com/faqs",
+      "path": "/faqs"
+    }
+  ],
+  "footerItems": [],
+  "innerPages": [
+    {
+      "path": "/about",
+      "title": "About | Hatseas",
+      "sections": [
+        "564-BAHAMAS",
+        "Our Story: HatSeas was born from a deep love for the Bahamas—a place where natural beauty, culture, and hospitality come together to create unforgettable moments. Inspired by the turquoise waters, pristine beaches, vibrant nightlife, and the warmth of the Bahamian people, HatSeas was founded to share the very best of the islands with the world.",
+        "We believe luxury tourism is not just about where you go, but how you experience it. At HatSeas, every journey is curated to capture the soul of the Bahamas—whether that’s an exclusive culinary tour, a private island escape, or an evening immersed in local music and culture.",
+        "Our Vision: To redefine Caribbean luxury tourism by offering authentic, world-class experiences that honor the spirit of the Bahamas while exceeding the expectations of every traveler.",
+        "Our Mission: To provide discerning travelers with personalized, immersive, and luxurious experiences that highlight the best of Bahamian culture, landscapes, cuisine, and lifestyle—while giving thanks to the Bahamian people for sharing their islands with us.",
+        "Our Values: Authenticity – Every experience reflects the genuine culture and traditions of the Bahamas. Exclusivity – We curate one-of-a-kind adventures tailored to each guest’s desires. Sustainability – We respect and protect the islands’ natural beauty for future generations. Gratitude – We always honor and thank Bahamians for their generosity in sharing their paradise. Excellence – From the smallest detail to the grandest adventure, we deliver nothing but the best.",
+        "The HatSeas Promise: With HatSeas, you don’t just visit the Bahamas—you live it. Every moment is crafted with care, passion, and respect for the islands and their people. From breathtaking landscapes to hidden cultural gems, we ensure your journey is more than a trip—it’s a story worth telling."
+      ]
+    },
+    {
+      "path": "/tours",
+      "title": "Nassau ATV and Buggy Tour Adventure Awaits!",
+      "sections": [
+        "Island ATV & Buggy Tour"
+      ]
+    },
+    {
+      "path": "/rentals",
+      "title": "Vehicle Rentals in Nassau Bahamas - Book Now!",
+      "sections": [
+        "Vehicle Rentals in Nassau, Bahamas"
+      ]
+    },
+    {
+      "path": "/vip-package",
+      "title": "VIP Package | Travel Services by Hatseas",
+      "sections": [
+        "Snorkeling & Swimming with Pigs"
+      ]
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Hatseas for Bahamas Travel Inquiries",
+      "sections": [
+        "We'd love to hear from you!",
+        "Find us on social media"
+      ]
+    },
+    {
+      "path": "/faqs",
+      "title": "FAQ's",
+      "sections": [
+        "Frequently Asked Questions"
+      ]
+    }
+  ]
+}

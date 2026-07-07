@@ -20,43 +20,45 @@
 
 export const brand = {
   /** Product / company name. Shows in the nav, hero, footer, <title>, OG tags. */
-  name: "Aurora",
+  name: "Hatseas",
 
   /** One-line value prop. Used in the hero sub-headline + meta description. */
-  tagline: "The starter pack for shipping websites that don't look AI-built.",
+  tagline: "Island Excursions in the Bahamas",
 
   /** Longer description for SEO / Open Graph. ~150 chars is ideal. */
   description:
-    "A production-grade Next.js + Tailwind + shadcn starter with a real design system, motion, and one-command deploy to Vercel.",
+    "Discover unforgettable island excursions and adventures in the Bahamas with HatSeas. Book your dream tours and rentals today!",
 
   /** Primary domain WITHOUT protocol. `/build` sets this to <project>.getyetti.com. */
-  domain: "aurora.getyetti.com",
+  domain: "hatseas.getyetti.com",
 
   /** Theme — drives the whole color system. Run `npm run brand` after editing. */
   theme: {
     /** Brand hue in OKLCH degrees (0–360). This single number re-skins the site. */
-    hue: 265,
+    hue: 206,
     /** Corner style. "sharp" = modern/editorial, "rounded" = friendly, "pill" = playful. */
     corners: "rounded" as "sharp" | "rounded" | "pill",
     /** Default color scheme on first paint. */
-    defaultScheme: "dark" as "light" | "dark",
+    defaultScheme: "light" as "light" | "dark",
   },
 
   /** Fonts. Any Google Font name works — edit, then run `npm run brand`. */
   fonts: {
     /** Big headlines. Pick something with PERSONALITY — this is what breaks the AI look. */
-    display: "Space Grotesk",
+    display: "Sora",
     /** Body / UI text. Keep it clean and readable. */
-    sans: "Geist",
+    sans: "Inter",
     /** Code / labels / kbd. */
     mono: "JetBrains Mono",
   },
 
   /** Links shown in the footer + used by deploy scripts. */
   social: {
-    github: "your-org/your-repo",
-    x: "yourhandle",
-    email: "hello@aurora.example.com",
+    github: "",
+    x: "",
+    instagram: "https://www.instagram.com/hatseas_bahamas",
+    facebook: "https://www.facebook.com/profile.php?id=716511461555456",
+    email: "hello@hatseas.com",
   },
 
   /**
@@ -66,10 +68,10 @@ export const brand = {
    * - address + mapQuery: set them and the <Map> section renders a pin + embedded map.
    */
   contact: {
-    whatsapp: "",
-    phone: "",
-    address: "",
-    mapQuery: "",
+    whatsapp: "16317075887",
+    phone: "564-BAHAMAS",
+    address: "Nassau, New Providence, Bahamas",
+    mapQuery: "Nassau, Bahamas",
   },
 } as const;
 
