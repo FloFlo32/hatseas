@@ -6,12 +6,12 @@ import { Map } from "@/components/sections/map";
 import { ContactForm } from "@/components/sections/contact-form";
 import { Reveal } from "@/components/magic/reveal";
 import { WhatsAppIcon, InstagramIcon, FacebookIcon } from "@/components/icons";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
 import { brand } from "@/brand.config";
 import { contactContent } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: { absolute: "Contact Hatseas for Bahamas Travel Inquiries" },
   description: "Contact Hatseas for Bahamas travel inquiries. We'd love to hear from you!",
 };
 
@@ -47,10 +47,8 @@ export default function ContactPage() {
                     </a>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Mail className="mt-0.5 size-4 shrink-0 text-primary" />
-                    <a href={`mailto:${brand.social.email}`} className="text-muted-foreground hover:text-primary cursor-pointer">
-                      Email Us Anytime! ({brand.social.email})
-                    </a>
+                    <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+                    <span className="text-muted-foreground">{brand.contact.address}</span>
                   </li>
                 </ul>
 

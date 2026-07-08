@@ -1,15 +1,14 @@
 import { AutoSlider } from "@/components/magic/auto-slider";
 import { ImageCard } from "@/components/magic/image-card";
 import { Reveal } from "@/components/magic/reveal";
+import { Eyebrow } from "@/components/magic/eyebrow";
 import { homeTours } from "@/lib/site-data";
 
 export function AvailableTours() {
   return (
     <section className="container-px mx-auto max-w-6xl py-20 sm:py-24">
       <Reveal>
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-          Available Tours
-        </span>
+        <Eyebrow>Available Tours</Eyebrow>
         <h2 className="mt-3 max-w-xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
           We offer the finest tours in the Bahamas
         </h2>

@@ -3,9 +3,19 @@ import { Clock } from "lucide-react";
 import type { rentalCategories } from "@/lib/site-data";
 
 export function RentalCard({ rental }: { rental: (typeof rentalCategories)[number] }) {
+  const lowest = rental.pricing
+    .map((p) => Number(p.price.replace(/[^0-9.]/g, "")))
+    .reduce((min, n) => Math.min(min, n), Infinity);
+
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-      <div className="relative aspect-[4/3] bg-muted">
+      <div
+        className="relative aspect-[4/3]"
+        style={{
+          background:
+            "radial-gradient(120% 120% at 50% 20%, color-mix(in oklch, var(--color-primary) 10%, var(--color-background)) 0%, var(--color-muted) 100%)",
+        }}
+      >
         <Image
           src={rental.image}
           alt={`${rental.name} rental in Nassau, Bahamas`}
@@ -14,6 +24,9 @@ export function RentalCard({ rental }: { rental: (typeof rentalCategories)[numbe
           quality={75}
           className="object-contain p-6"
         />
+        <span className="absolute right-4 top-4 rounded-full bg-warm px-3 py-1 text-xs font-bold text-warm-foreground shadow-sm">
+          From ${lowest}
+        </span>
       </div>
       <div className="flex flex-1 flex-col gap-3 p-6">
         <h3 className="font-display text-xl font-bold">{rental.name}</h3>

@@ -6,6 +6,7 @@ import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
+import { Eyebrow } from "@/components/magic/eyebrow";
 import { aboutContent } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -51,9 +52,7 @@ export default function AboutPage() {
         <section className="border-y border-border/70 bg-card py-20 sm:py-24">
           <div className="container-px mx-auto max-w-6xl">
             <Reveal className="text-center">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                What we stand for
-              </span>
+              <Eyebrow>What we stand for</Eyebrow>
               <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
                 Our Values
               </h2>
@@ -94,9 +93,7 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                The Hatseas Promise
-              </span>
+              <Eyebrow>The Hatseas Promise</Eyebrow>
               <p className="mt-4 text-2xl text-balance font-semibold leading-snug">
                 {aboutContent.promise}
               </p>

@@ -21,12 +21,7 @@ export function Subscribe() {
       <AuroraBackground className="opacity-60" />
       <div className="container-px relative mx-auto max-w-2xl text-center">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Subscribe
-          </span>
-          <h2 className="mt-3 text-balance text-3xl font-bold sm:text-4xl">
-            Get the best Bahamas travel deals in your inbox
-          </h2>
+          <h2 className="text-balance text-3xl font-bold sm:text-4xl">Subscribe</h2>
         </Reveal>
 
         <Reveal delay={0.08}>

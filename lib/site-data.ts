@@ -13,6 +13,9 @@ export const navItems = [
   { label: "FAQ's", href: "/faqs" },
 ] as const;
 
+/** The source site's footer omits FAQ's (it's nav-only there). */
+export const footerNavItems = navItems.filter((item) => item.label !== "FAQ's");
+
 /** "Available Tours" teaser row on the homepage. */
 export const homeTours = [
   {
@@ -122,7 +125,8 @@ export const tours = [
       { label: "Times", value: "9:30am or 1:00pm" },
       { label: "Duration", value: "3 hours" },
     ],
-    inclusions: ["Bottled water & helmets", "Price is per person, adult (ask for a child discount)"],
+    inclusions: ["Bottled water & helmets"],
+    priceNote: "Price: Per Person Adult. Ask for a discount for your Child.",
     note: "Experience the thrill of ATV tours in the Bahamas, where you can explore the vibrant history on our historical tours in Nassau. Discover the beauty of Nassau tours as you embark on this unforgettable adventure!",
   },
   {
@@ -215,7 +219,7 @@ export const rentalCategories = [
     name: "Jeep Wrangler",
     image: "/ingested/hatseas/rental-jeep-wrangler.jpg",
     blurb:
-      "Looking for a summer adventure in the Bahamas, but want the option to turn on the air conditioning when it gets too warm? Consider a Jeep Wrangler rental for your journey! These renowned road vehicles can elevate your fun, whether you're exploring local attractions or heading to the beach.",
+      "Looking for a summer adventure in the Bahamas, but want the option to turn on the air conditioning when it gets too warm? Consider a Jeep Wrangler rental for your journey! These renowned road vehicles can elevate your fun, whether you're exploring local attractions or heading to the beach. For a different experience, you might also check out ATV rental Bahamas, E-Bike rental, Golf Cart rental, or even scooter rental in Nassau to make the most of your trip.",
     pricing: [
       { duration: "24 Hours", price: "$350" },
       { duration: "8 Hours", price: "$325" },
@@ -227,7 +231,7 @@ export const rentalCategories = [
     name: "ATV",
     image: "/ingested/hatseas/rental-atv.jpg",
     blurb:
-      "Hands down, the world's most thrilling street ride awaits you in the Bahamas. Off-road trails have never felt so heavenly. You can take the thrill alone or with a passenger, and when you return, you'll have great memories to last a lifetime.",
+      "Hands down, the world's most thrilling street ride awaits you in the Bahamas. Whether you opt for an ATV rental Bahamas, an E-Bike rental, or even a Jeep Wrangler rental, off-road trails have never felt so heavenly. You can take the thrill alone or with a passenger, and if you're looking for something more leisurely, consider a golf cart rental or scooter rental Nassau. One thing is certain: when you return, you'll have great memories to last a lifetime.",
     pricing: [
       { duration: "24 Hours", price: "$325" },
       { duration: "8 Hours", price: "$300" },
@@ -242,7 +246,7 @@ export const rentalCategories = [
     name: "Scooter",
     image: "/ingested/hatseas/rental-scooter.jpg",
     blurb:
-      "No traffic aboard this bad boy! With a scooter rental in Nassau, you can rip and skip through traffic and roll right up to the door of your favorite spot. There's no better, more convenient way to explore.",
+      "No traffic aboard this bad boy! With an ATV rental in the Bahamas, you can rip and skip through traffic and roll right up to the door of your favorite spot. Whether you prefer an E-Bike rental, a Golf Cart rental, or even a Jeep Wrangler rental, there's no better way to explore. Don't forget about the convenience of a scooter rental in Nassau to make your adventures even easier!",
     pricing: [
       { duration: "24 Hours", price: "$230" },
       { duration: "8 Hours", price: "$200" },
@@ -257,7 +261,7 @@ export const rentalCategories = [
     name: "Buggy",
     image: "/ingested/hatseas/rental-buggy.jpg",
     blurb:
-      "Make it a family day out or self-explore with up to 4 of your best mates using a buggy rental in the Bahamas. This rental option gives you endless possibilities without a guide. Equipped with a map, enjoy the beautiful weather and feel the tropical breeze.",
+      "Make it a family day out or self-explore with up to 4 of your best mates using an ATV rental in the Bahamas. This rental option gives you endless possibilities without a guide. Equipped with a map, you can also consider an E-Bike rental, Golf Cart rental, Jeep Wrangler rental, or even a scooter rental in Nassau to make the most of a few hours, enjoy the beautiful weather, and feel the tropical breeze.",
     pricing: [
       { duration: "24 Hours", price: "$400" },
       { duration: "8 Hours", price: "$350" },
@@ -270,7 +274,7 @@ export const rentalCategories = [
     name: "E-Bike",
     image: "/ingested/hatseas/rental-ebike.jpg",
     blurb:
-      "Experience the freedom and excitement of exploring the city with our premium e-bike rental service! Our electric bicycles are designed to make your ride smoother, faster, and more enjoyable, with a powerful motor and long-lasting battery for effortless cruising.",
+      "Experience the freedom and excitement of exploring the city with our premium e-bike rental service! Our electric bicycles are designed to make your ride smoother, faster, and more enjoyable than ever before. With a powerful motor and long-lasting battery, you can effortlessly cruise through the streets, tackle hills with ease, and travel longer distances without breaking a sweat. Plus, if you're looking for more options, we also offer ATV rental in the Bahamas, golf cart rental, Jeep Wrangler rental, and scooter rental in Nassau. Despite their sleek, traditional design, our e-bicycles are equipped with cutting-edge technology to enhance your ride.",
     pricing: [
       { duration: "24 Hours", price: "$135" },
       { duration: "8 Hours", price: "$125" },
@@ -285,7 +289,7 @@ export const rentalCategories = [
     name: "Golf Cart",
     image: "/ingested/hatseas/rental-golf-cart.jpg",
     blurb:
-      "Cruise the island in the most island-worthy vehicle ever: a Street Legal Golf Cart! Take in the many Bahamian sights and experiences as you move carefree about the streets of New Providence, and pull up to your choice destinations effortlessly.",
+      "Cruise the island in the most island-worthy vehicle ever: a Street Legal Golf Cart! With our Golf Cart rental, you can take in the many Bahamian sights and experiences as you move carefree about the streets of New Providence. Pull up to your choice destinations effortlessly. For those looking for alternative adventures, consider our ATV rental in the Bahamas, E-Bike rental, Jeep Wrangler rental, or even a scooter rental in Nassau for a different way to explore.",
     pricing: [{ duration: "4 Hours", price: "$240" }],
   },
 ] as const;
@@ -297,7 +301,7 @@ export const vipPackage = {
   title: "Snorkeling & Swimming with Pigs",
   price: "$425 pp",
   intro:
-    "Embark on the ultimate VIP adventure with our “VIP Package – Snorkeling & Swimming Pigs”, where every moment is a thrilling escapade into the beauty of the sea. Brace yourself for a 4-hour catamaran journey to Rose Island, where excitement, exploration, and exquisite flavors converge for an unforgettable experience.",
+    "Embark on the ultimate VIP adventure with our “VIP Package: Snorkeling & Swimming Pigs”, where every moment is a thrilling escapade into the beauty of the sea. Brace yourself for a 4-hour catamaran journey to Rose Island, where excitement, exploration, and exquisite flavors converge for an unforgettable experience.",
   sections: [
     {
       title: "Dive into the Depths",
@@ -312,7 +316,7 @@ export const vipPackage = {
       body: "Arriving at Rose Island, your playground awaits. Access all beach amenities and indulge in an array of activities, including flotation devices, sea swings, and beach games. The possibilities are endless as you bask in the sun and embrace the carefree island vibes.",
     },
     {
-      title: "Swim with the Stars – The Famous Swimming Pigs",
+      title: "Swim with the Stars: The Famous Swimming Pigs",
       body: "But the excitement doesn't end there! Brace yourself for an encounter with the legendary swimming pigs. These adorable creatures make a splash, creating a unique and Instagram-worthy experience. Get ready to capture unforgettable moments as you frolic with these charming aquatic celebrities.",
     },
   ],
@@ -324,10 +328,9 @@ export const vipPackage = {
     "Green Salad",
     "Sweet Chili Wings",
     "Buttermilk Fried Wings",
-    "Honey BBQ Ribs",
-    "or Lemon Pepper Fish Fingers",
+    "Honey BBQ Ribs or Lemon Pepper Fish Fingers",
   ],
-  menuNote: "Kids under 4 are FREE. No changes can be made to the menu.",
+  menuNote: "Kids Under 4 Are FREE - No changes can be made to the menu.",
 } as const;
 
 export const aboutContent = {
@@ -381,7 +384,7 @@ export const whyChooseBahamas = {
     },
     {
       title: "Why It Endures for Repeat Visitors",
-      body: "What ultimately distinguishes Nassau is its versatility. First-time visitors are impressed by the beauty, convenience, and polish. Repeat visitors return because the island reveals itself in layers, new beaches, deeper cultural connections, favorite restaurants, and relationships with the people who give the island its warmth. In short, Nassau's finest quality is balance: natural splendor without isolation, luxury without pretension, and culture without compromise.",
+      body: "What ultimately distinguishes Nassau is its versatility. First-time visitors are impressed by the beauty, convenience, and polish. Repeat visitors return because the island reveals itself in layers, new beaches, deeper cultural connections, favorite restaurants, and relationships with the people who give the island its warmth. In short, Nassau's finest quality is balance: natural splendor without isolation, luxury without pretension, and culture without compromise. It is a destination that welcomes newcomers effortlessly while continuing to reward those who return.",
     },
   ],
 };
@@ -405,7 +408,7 @@ export const faqs = [
   },
   {
     q: "Is tipping customary in Nassau?",
-    a: "Yes. A 15% gratuity is often included at resorts and restaurants. If not included, tipping 15–20% for good service is customary.",
+    a: "Yes. A 15% gratuity is often included at resorts and restaurants. If not included, tipping 15-20% for good service is customary.",
   },
   {
     q: "How do I get around Nassau?",
@@ -433,6 +436,5 @@ export const contactContent = {
   heading: "We'd love to hear from you!",
   intro:
     "Have a question about our Bahamas travel services? If you're curious whether your specific vacation is one we can assist with, please contact us, we'd love to hear from you and help you get in touch!",
-  hours: "Open today: 09:00 am – 05:00 pm",
-  addressLine: "Hatseas Bahamas, Bahamas, New Providence, Nassau",
+  hours: "Open today: 09:00 am to 05:00 pm",
 };
