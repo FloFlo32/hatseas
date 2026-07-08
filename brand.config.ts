@@ -58,7 +58,8 @@ export const brand = {
     x: "",
     instagram: "https://www.instagram.com/hatseas_bahamas",
     facebook: "https://www.facebook.com/profile.php?id=716511461555456",
-    email: "hello@hatseas.com",
+    /** No verified public email on the source site (its "Email Us" is a form widget) — leave blank rather than invent one. */
+    email: "",
   },
 
   /**
@@ -66,11 +67,13 @@ export const brand = {
    * - whatsapp: digits only, country code first, no "+". Set it and a click-to-chat
    *   widget appears (components/widget/whatsapp-widget.tsx).
    * - address + mapQuery: set them and the <Map> section renders a pin + embedded map.
+   *   mapQuery is a search string for the embed, so it can be ordered for accuracy
+   *   even though the displayed `address` matches the source's literal wording.
    */
   contact: {
     whatsapp: "16317075887",
     phone: "564-BAHAMAS",
-    address: "Nassau, New Providence, Bahamas",
+    address: "Bahamas, New Providence, Nassau",
     mapQuery: "Nassau, Bahamas",
   },
 } as const;

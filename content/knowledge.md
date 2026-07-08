@@ -85,7 +85,6 @@ additional $30.00 per person.
 
 ## Contact
 - Phone: 564-BAHAMAS (booking, available 24/7 for calls)
-- WhatsApp: available via the contact page click-to-chat button
-- Email: hello@hatseas.com
-- Address: Nassau, New Providence, Bahamas
+- WhatsApp: available via the contact page click-to-chat button and the site-wide WhatsApp widget
+- Address: Bahamas, New Providence, Nassau
 - Instagram: instagram.com/hatseas_bahamas

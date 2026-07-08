@@ -55,6 +55,11 @@ export function TourSection({ tour, reverse }: { tour: (typeof tours)[number]; r
                   </li>
                 ))}
               </ul>
+              {"priceNote" in tour && tour.priceNote && (
+                <p className="mt-3 border-t border-border pt-3 text-sm text-muted-foreground">
+                  {tour.priceNote}
+                </p>
+              )}
             </div>
           </div>
         </Reveal>

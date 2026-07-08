@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { brand } from "@/brand.config";
-import { navItems } from "@/lib/site-data";
-import { InstagramIcon, FacebookIcon } from "@/components/icons";
+import { footerNavItems } from "@/lib/site-data";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "@/components/icons";
 
 export function Footer() {
   return (
@@ -53,7 +53,7 @@ export function Footer() {
             Explore
           </h4>
           <ul className="mt-4 space-y-2.5">
-            {navItems.map((item) => (
+            {footerNavItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -78,9 +78,14 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href={`mailto:${brand.social.email}`} className="inline-flex items-center gap-2 hover:text-primary cursor-pointer">
-                <Mail className="size-4 shrink-0 text-primary" />
-                {brand.social.email}
+              <a
+                href={`https://wa.me/${brand.contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-primary cursor-pointer"
+              >
+                <WhatsAppIcon className="size-4 shrink-0 text-primary" />
+                Message us on WhatsApp
               </a>
             </li>
             <li className="flex items-start gap-2">
@@ -92,9 +97,8 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border/70 py-6">
-        <div className="container-px mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 text-xs text-muted-foreground sm:flex-row">
+        <div className="container-px mx-auto max-w-6xl text-center text-xs text-muted-foreground">
           <p>Copyright © 2026 Hatseas - All Rights Reserved.</p>
-          <p>We use cookies to analyze website traffic and optimize your website experience.</p>
         </div>
       </div>
     </footer>

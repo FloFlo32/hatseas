@@ -1,10 +1,17 @@
 "use client";
 
 import * as React from "react";
-import { Send, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/icons";
 import { brand } from "@/brand.config";
 
+/**
+ * The source site's "Send" button posts to a GoDaddy form backend we don't
+ * have. WhatsApp is the one verified, working channel HatSeas actually
+ * publishes, so submitting routes the message there instead of a dead form
+ * post or an invented mailto address.
+ */
 export function ContactForm() {
   const [sent, setSent] = React.useState(false);
   const [name, setName] = React.useState("");
@@ -14,9 +21,14 @@ export function ContactForm() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
-    const subject = encodeURIComponent(`New inquiry from ${name || "the Hatseas website"}`);
-    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
-    window.location.href = `mailto:${brand.social.email}?subject=${subject}&body=${body}`;
+    const text = [
+      `Hi Hatseas, my name is ${name || "a website visitor"}.`,
+      message,
+      `You can reach me at ${email}.`,
+    ]
+      .filter(Boolean)
+      .join(" ");
+    window.open(`https://wa.me/${brand.contact.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
     setSent(true);
   }
 
@@ -28,7 +40,7 @@ export function ContactForm() {
         </span>
         <p className="mt-4 text-lg font-semibold">Thanks for reaching out!</p>
         <p className="mt-1 text-sm text-muted-foreground">
-          Your email app should have opened with your message ready to send.
+          We opened WhatsApp with your message ready to send.
         </p>
       </div>
     );
@@ -80,7 +92,7 @@ export function ContactForm() {
       </p>
       <div className="mt-4 flex gap-3">
         <Button type="submit">
-          <Send className="size-4" /> Send
+          <WhatsAppIcon className="size-4" /> Send
         </Button>
         <Button
           type="button"

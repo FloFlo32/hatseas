@@ -11,7 +11,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { vipPackage } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "VIP Package",
+  title: { absolute: "VIP Package | Travel Services by Hatseas" },
   description: "Snorkeling & Swimming with Pigs. A 4-hour catamaran VIP adventure to Rose Island.",
 };
 
@@ -66,18 +66,20 @@ export default function VipPackagePage() {
                 </div>
               </Reveal>
               <Reveal delay={0.08}>
-                <span className="inline-flex items-center gap-2 rounded-full bg-warm px-4 py-1.5 text-sm font-bold text-warm-foreground">
-                  <UtensilsCrossed className="size-4" /> {vipPackage.price}
-                </span>
-                <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
+                <h2 className="font-display text-3xl font-bold sm:text-4xl">
                   Gourmet Delights, Choose Your Feast
                 </h2>
+                <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-warm px-4 py-1.5 text-sm font-bold text-warm-foreground">
+                  <UtensilsCrossed className="size-4" /> {vipPackage.price}
+                </span>
                 <p className="mt-4 text-pretty text-muted-foreground">{vipPackage.menuIntro}</p>
                 <ul className="mt-5 grid grid-cols-2 gap-2">
-                  {vipPackage.menu.map((item) => (
+                  {vipPackage.menu.map((item, i) => (
                     <li
                       key={item}
-                      className="rounded-full border border-border bg-background px-3 py-1.5 text-center text-sm"
+                      className={`rounded-full border border-border bg-background px-3 py-1.5 text-center text-sm ${
+                        i === vipPackage.menu.length - 1 ? "col-span-2" : ""
+                      }`}
                     >
                       {item}
                     </li>

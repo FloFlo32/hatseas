@@ -9,7 +9,7 @@ import { brand } from "@/brand.config";
 import { faqs } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "FAQ's",
+  title: { absolute: "FAQ's" },
   description: "Frequently asked questions about booking tours and rentals with Hatseas in the Bahamas.",
 };
 

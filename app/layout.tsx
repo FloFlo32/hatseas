@@ -5,14 +5,15 @@ import { fontVariables } from "@/lib/fonts";
 import { ThemeScript } from "@/components/theme-provider";
 import { FaqWidget } from "@/components/widget/faq-widget";
 import { WhatsAppWidget } from "@/components/widget/whatsapp-widget";
+import { CookieConsent } from "@/components/widget/cookie-consent";
 
 const siteUrl = `https://${brand.domain}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${brand.name} — ${brand.tagline}`,
-    template: `%s · ${brand.name}`,
+    default: "Island Excursions in the Bahamas | HatSeas",
+    template: `%s | ${brand.name}`,
   },
   description: brand.description,
   applicationName: brand.name,
@@ -45,6 +46,7 @@ export default function RootLayout({
         {children}
         <FaqWidget />
         <WhatsAppWidget />
+        <CookieConsent />
       </body>
     </html>
   );

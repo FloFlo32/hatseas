@@ -10,7 +10,7 @@ import { RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { rentalCategories, rentalNote } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Rentals",
+  title: { absolute: "Vehicle Rentals in Nassau Bahamas - Book Now!" },
   description: "Vehicle Rentals in Nassau, Bahamas. Jeep Wrangler, ATV, Scooter, Buggy, E-Bike and Golf Cart rentals.",
 };
 

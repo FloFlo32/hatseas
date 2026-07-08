@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/magic/reveal";
+import { Eyebrow } from "@/components/magic/eyebrow";
+import { GridPattern } from "@/components/magic/grid-pattern";
 
 /**
  * Shared hero for every inner page: a real photo, a short eyebrow, a big
@@ -20,13 +22,12 @@ export function PageHero({
   alt: string;
 }) {
   return (
-    <section className="border-b border-border/70 bg-card">
+    <section className="relative overflow-hidden border-b border-border/70 bg-card">
+      <GridPattern className="opacity-60" />
       <div className="container-px mx-auto max-w-6xl py-16 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              {eyebrow}
-            </span>
+            <Eyebrow>{eyebrow}</Eyebrow>
             <h1 className="mt-4 text-balance text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
               {title}
             </h1>

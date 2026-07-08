@@ -41,7 +41,7 @@ export async function POST(req: Request) {
   const system = [
     `You are the friendly FAQ assistant for ${brand.name}.`,
     `Answer questions using ONLY the knowledge base below. Be concise, warm, and concrete.`,
-    `If the answer isn't in the knowledge base, say you're not sure and suggest contacting ${brand.social.email}. Never invent facts, prices, or features.`,
+    `If the answer isn't in the knowledge base, say you're not sure and suggest calling ${brand.contact.phone} or messaging on WhatsApp. Never invent facts, prices, or features.`,
     `Reply in plain text (short paragraphs or bullet points). Do not mention "the knowledge base".`,
     ``,
     `=== KNOWLEDGE BASE ===`,
